@@ -19,7 +19,7 @@ class ItemCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(18),
           color: Colors.white,
@@ -27,28 +27,18 @@ class ItemCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: ClipRRect(
+            Container(
+              height: 120,
+              width: double.infinity,
+              decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(18),
-                child: Image.network(
-                  imageURL,
-                  width: double.infinity,
+                image: DecorationImage(
+                  image: NetworkImage(imageURL),
                   fit: BoxFit.contain,
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return const Center(
-                      child: CircularProgressIndicator(
-                        color: Color(0xFF5C40CC),
-                      ),
-                    );
-                  },
-                  errorBuilder: (context, error, stackTrace) =>
-                      const Icon(Icons.broken_image, size: 64),
                 ),
               ),
             ),
             const SizedBox(height: 10),
-            
             Padding(
               padding: const EdgeInsets.only(left: 10, top: 10),
               child: Text(
@@ -63,7 +53,6 @@ class ItemCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 5),
-            
             Padding(
               padding: const EdgeInsets.only(left: 10, bottom: 10),
               child: Text(
