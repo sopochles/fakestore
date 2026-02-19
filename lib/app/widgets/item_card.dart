@@ -19,7 +19,7 @@ class ItemCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+        padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(18),
           color: Colors.white,
@@ -40,27 +40,27 @@ class ItemCard extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.only(left: 10, top: 10),
+              padding: EdgeInsets.only(left: 10, top: 10),
               child: Text(
                 name,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
+                style: TextStyle(
                   color: Color(0xFF1F1449),
                   fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: 5),
             Padding(
-              padding: const EdgeInsets.only(left: 10, bottom: 10),
+              padding: EdgeInsets.only(left: 10, bottom: 10),
               child: Text(
                 '\$${price.toStringAsFixed(2)}',
-                style: const TextStyle(
+                style: TextStyle(
                   color: Color(0xFF5C40CC),
                   fontSize: 14,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),

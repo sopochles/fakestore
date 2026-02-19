@@ -27,10 +27,10 @@ class _ProductListPageState extends State<ProductListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFAFAFA),
+      backgroundColor: Color(0xFFFAFAFA),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(24, 50, 24, 30),
+          padding: EdgeInsets.fromLTRB(24, 50, 24, 30),
           child: Column(
             children: [
               ProductListHeader(name: widget.name),
@@ -38,7 +38,7 @@ class _ProductListPageState extends State<ProductListPage> {
               BlocBuilder<ProductListCubit, ProductListState>(
                 builder: (context, state) {
                   if (state is ProductListLoading) {
-                    return const Center(
+                    return Center(
                       child: CircularProgressIndicator(
                         color: Color(0xFF5C40CC),
                       ),
@@ -46,14 +46,13 @@ class _ProductListPageState extends State<ProductListPage> {
                   } else if (state is ProductListLoaded) {
                     return GridView.builder(
                       shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 16,
-                            mainAxisSpacing: 16,
-                            childAspectRatio: 0.7,
-                          ),
+                      physics: NeverScrollableScrollPhysics(),
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        crossAxisSpacing: 16,
+                        mainAxisSpacing: 16,
+                        childAspectRatio: 0.7,
+                      ),
                       itemCount: state.products.length,
                       itemBuilder: (context, index) {
                         final product = state.products[index];
@@ -73,7 +72,7 @@ class _ProductListPageState extends State<ProductListPage> {
                   } else if (state is ProductListError) {
                     return Center(child: Text(state.message));
                   }
-                  return const SizedBox();
+                  return SizedBox();
                 },
               ),
             ],
