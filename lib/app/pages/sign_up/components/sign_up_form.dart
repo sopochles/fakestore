@@ -28,7 +28,7 @@ class _SignUpFormState extends State<SignUpForm> {
         child: Column(
           children: [
             CustomTextField(
-              label: "Name",
+              label: "Full Name",
               hint: "",
               inputType: TextInputType.text,
               controller: nameController,
@@ -59,13 +59,6 @@ class _SignUpFormState extends State<SignUpForm> {
             CustomButton(
               text: "Get Started",
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => HomePage(name: nameController.text),
-                //   ),
-                // );
-
                 Modular.to.navigate(
                   '/productlist/',
                   arguments: {

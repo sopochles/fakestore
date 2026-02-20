@@ -38,9 +38,12 @@ class _ProductListPageState extends State<ProductListPage> {
               BlocBuilder<ProductListCubit, ProductListState>(
                 builder: (context, state) {
                   if (state is ProductListLoading) {
-                    return Center(
-                      child: CircularProgressIndicator(
-                        color: Color(0xFF5C40CC),
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height,
+                      child: Center(
+                        child: CircularProgressIndicator(
+                          color: Color(0xFF5C40CC),
+                        ),
                       ),
                     );
                   } else if (state is ProductListLoaded) {
@@ -61,9 +64,9 @@ class _ProductListPageState extends State<ProductListPage> {
                           name: product.title,
                           price: product.price,
                           onTap: () {
-                            Modular.to.navigate(
+                            Modular.to.pushNamed(
                               '/productlist/detail/',
-                              arguments: {'id': product.id},
+                              arguments: {'id': product.id, 'name': widget.name},
                             );
                           },
                         );

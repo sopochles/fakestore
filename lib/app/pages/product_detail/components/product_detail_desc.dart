@@ -17,16 +17,17 @@ class ProductDetailDesc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          price.toString(),
+          '\$${price.toStringAsFixed(2)}',
           style: TextStyle(
             color: Color(0xFF5C40CC),
             fontSize: 20,
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(height: 5),
+        SizedBox(height: 10),
         Text(
           name,
           style: TextStyle(
@@ -35,48 +36,43 @@ class ProductDetailDesc extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-
-          children: [
-            Text(
-              "Description",
-              style: TextStyle(
-                color: Color(0xFF1F1449),
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              description,
-              style: TextStyle(
-                color: Color(0xFF1F1449),
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            SizedBox(height: 15),
-            Text(
-              "Category",
-              style: TextStyle(
-                color: Color(0xFF1F1449),
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(height: 5),
-            Text(
-              category,
-              style: TextStyle(
-                color: Color(0xFF1F1449),
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            SizedBox(height: 20),
-          ],
+        SizedBox(height: 20),
+        Text(
+          "Description",
+          style: TextStyle(
+            color: Color(0xFF1F1449),
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
         ),
+        SizedBox(height: 5),
+        Text(
+          description,
+          style: TextStyle(
+            color: Color(0xFF1F1449),
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        SizedBox(height: 15),
+        Text(
+          "Category",
+          style: TextStyle(
+            color: Color(0xFF1F1449),
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        SizedBox(height: 5),
+        Text(
+          category,
+          style: TextStyle(
+            color: Color(0xFF1F1449),
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        SizedBox(height: 20),
       ],
     );
   }
