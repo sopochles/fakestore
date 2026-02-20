@@ -53,7 +53,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 else if (state is ProductDetailLoaded) {
                   final product = state.product;
                   return Container(
-                    margin: EdgeInsets.all(30),
+                    margin: EdgeInsets.fromLTRB(30, 10, 30, 30),
                     child: Column(
                       children: [
                         AspectRatio(
@@ -68,7 +68,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        SizedBox(height: 25),
                         ProductDetailDesc(
                           name: product.title,
                           price: product.price,
