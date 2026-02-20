@@ -22,7 +22,7 @@ class ProductRepository {
     if (response.statusCode == 200) {
       return Product.fromJson(jsonDecode(response.body));
     } else {
-      throw Exception('Failed to load product');
+      throw Exception('Failed to load product detail');
     }
   }
 }

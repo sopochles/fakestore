@@ -28,7 +28,7 @@ class _SignUpFormState extends State<SignUpForm> {
         child: Column(
           children: [
             CustomTextField(
-              label: "Full Name",
+              label: "Name",
               hint: "",
               inputType: TextInputType.text,
               controller: nameController,

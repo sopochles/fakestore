@@ -1,5 +1,5 @@
-import 'package:fakestore/app/cubit/product_detail/product_detail_cubit.dart';
-import 'package:fakestore/app/cubit/product_detail/product_detail_state.dart';
+import 'package:fakestore/app/pages/product_detail/cubit/product_detail_cubit.dart';
+import 'package:fakestore/app/pages/product_detail/cubit/product_detail_state.dart';
 import 'package:fakestore/app/pages/product_detail/components/product_detail_desc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -48,7 +48,9 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       child: CircularProgressIndicator(color: Color(0xFF5C40CC)),
                     ),
                   );
-                } else if (state is ProductDetailLoaded) {
+                } 
+                
+                else if (state is ProductDetailLoaded) {
                   final product = state.product;
                   return Container(
                     margin: EdgeInsets.all(30),
@@ -76,8 +78,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                       ],
                     ),
                   );
-                } else if (state is ProductDetailError) {
-                  return Center(child: Text(state.message));
+                } 
+                
+                else if (state is ProductDetailError) {
+                  return SizedBox(
+                    height: MediaQuery.of(context).size.height,
+                    child: Center(child: Text(state.message)));
                 }
                 return SizedBox();
               },

@@ -1,4 +1,4 @@
-import 'package:fakestore/app/cubit/product_list/product_list_cubit.dart';
+import 'package:fakestore/app/pages/product_list/cubit/product_list_cubit.dart';
 import 'package:fakestore/app/pages/product_detail/product_detail_module.dart';
 import 'package:fakestore/app/repository/product_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
