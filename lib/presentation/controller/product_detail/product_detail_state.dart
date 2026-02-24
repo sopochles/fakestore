@@ -1,4 +1,4 @@
-import 'package:fakestore/app/models/product.dart';
+import 'package:fakestore/data/models/product.dart';
 import 'package:equatable/equatable.dart';
 
 abstract class ProductDetailState extends Equatable {

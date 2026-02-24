@@ -1,4 +1,4 @@
-import 'package:fakestore/app/pages/sign_up/sign_up_page.dart';
+import 'package:fakestore/presentation/pages/sign_up/sign_up_page.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class SignUpModule extends Module {

@@ -38,30 +38,32 @@ class ItemCard extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
-            Padding(
-              padding: EdgeInsets.only(left: 10, top: 10),
-              child: Text(
-                name,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                  color: Color(0xFF1F1449),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-            SizedBox(height: 5),
-            Padding(
-              padding: EdgeInsets.only(left: 10, bottom: 10),
-              child: Text(
-                '\$${price.toStringAsFixed(2)}',
-                style: TextStyle(
-                  color: Color(0xFF5C40CC),
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                ),
+            SizedBox(height: 10),
+            Container(
+              margin: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    name,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: Color(0xFF1F1449),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    '\$${price.toStringAsFixed(2)}',
+                    style: TextStyle(
+                      color: Color(0xFF5C40CC),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

@@ -1,4 +1,4 @@
-import 'package:fakestore/app/repository/product_repository.dart';
+import 'package:fakestore/data/repository/product_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'product_detail_state.dart';
 

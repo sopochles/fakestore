@@ -1,8 +1,8 @@
-import 'package:fakestore/app/pages/product_detail/cubit/product_detail_cubit.dart';
-import 'package:fakestore/app/repository/product_repository.dart';
+import 'package:fakestore/presentation/controller/product_detail/product_detail_cubit.dart';
+import 'package:fakestore/data/repository/product_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'product_detail_page.dart';
+import '../pages/product_detail/product_detail_page.dart';
 
 class ProductDetailModule extends Module {
   @override

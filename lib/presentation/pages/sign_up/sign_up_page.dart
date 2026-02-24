@@ -1,5 +1,5 @@
 
-import 'package:fakestore/app/pages/sign_up/components/sign_up_form.dart';
+import 'package:fakestore/presentation/pages/sign_up/components/sign_up_form.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
