@@ -20,15 +20,6 @@ class ProductDetailDesc extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '\$${price.toStringAsFixed(2)}',
-          style: TextStyle(
-            color: Color(0xFF5C40CC),
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        SizedBox(height: 10),
-        Text(
           name,
           style: TextStyle(
             color: Color(0xFF1F1449),
@@ -36,12 +27,30 @@ class ProductDetailDesc extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 10),
         Text(
-          "Description",
+          'Price',
+          style: TextStyle(
+            color: Color(0xFF999999),
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
+        SizedBox(height: 5),
+        Text(
+          '\$${price.toStringAsFixed(2)}',
+          style: TextStyle(
+            color: Color(0xFF5C40CC),
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        SizedBox(height: 15),
+        Text(
+          'Description',
           style: TextStyle(
             color: Color(0xFF1F1449),
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: FontWeight.w600,
           ),
         ),
@@ -56,10 +65,10 @@ class ProductDetailDesc extends StatelessWidget {
         ),
         SizedBox(height: 15),
         Text(
-          "Category",
+          'Category',
           style: TextStyle(
             color: Color(0xFF1F1449),
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: FontWeight.w600,
           ),
         ),
