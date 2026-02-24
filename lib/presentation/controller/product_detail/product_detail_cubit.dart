@@ -1,9 +1,9 @@
-import 'package:fakestore/data/repository/product_repository.dart';
+import 'package:fakestore/domain/repositories/i_product_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'product_detail_state.dart';
 
 class ProductDetailCubit extends Cubit<ProductDetailState> {
-  final ProductRepository _repository;
+  final IProductRepository _repository;
 
   ProductDetailCubit(this._repository) : super(ProductDetailInitial());
 
